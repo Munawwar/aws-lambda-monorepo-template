@@ -1,0 +1,14 @@
+{
+  "name": "lambda-service-a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No tests..'"
+  },
+  "dependencies": {
+    "lodash.get": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}

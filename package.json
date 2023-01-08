@@ -1,0 +1,24 @@
+{
+  "name": "aws-lambda-monorepo-template",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "nx affected --base=main --head=HEAD --target=test",
+    "test:all": "nx run-many --target=test"
+  },
+  "private": true,
+  "dependencies": {
+    "nx": "15.6.3"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/lambda-*",
+      "**/lambda-*/**",
+      "**/lib-*",
+      "**/lib-*/**"
+    ]
+  }
+}

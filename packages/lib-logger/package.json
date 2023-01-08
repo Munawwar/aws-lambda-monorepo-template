@@ -1,0 +1,14 @@
+{
+  "name": "lib-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "rimraf": "rm -fr node_modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.17.0"
+  }
+}
