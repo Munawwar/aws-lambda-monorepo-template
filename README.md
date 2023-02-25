@@ -2,7 +2,7 @@
 
 This template uses npm workspace, yarn 1 (for nohoist) and <a href="https://nx.dev" target="_blank" rel="noreferrer">NX</a> for finding out what packages changed between two git branches at build time.
 
-Repo has two lambdas (Service A and Service B) and a library (logger library) that can be add into any lambda's dependency list Service B depends on the logger library.
+As an example, the repo has two lambdas (Service A and Service B) and a library (logger library) that can be add into any lambda's dependency list. Service B depends on the logger library.
 
 On the `release` branch, I made some changes to the logger library to see how we could make the build figure out which lambdas got affected. (It should only affect Service B)
 
