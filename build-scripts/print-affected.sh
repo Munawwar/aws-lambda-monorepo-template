@@ -1,9 +1,10 @@
 #!/bin/sh
-# install prod dependencies of project root only (this of for the nx binray)
+# install prod dependencies of project root only (this is for the nx binray)
+cp package.json package-orignal.json
 jq 'del(.workspaces)' package.json > package2.json
 mv package2.json package.json
-yarn install --prod --pure-lockfile
-git checkout -- package.json
+npm ci --omit=dev
+mv package-orignal.json package.json
 
 # Delete non-affected apps
 ls packages/ | grep -E '^(lambda|ecs)-' | sort > all.txt
