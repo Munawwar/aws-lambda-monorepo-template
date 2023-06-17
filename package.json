@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "ci:graph": "nx graph --file graph.json",
     "test": "nx affected --base=main --head=HEAD --target=test",
     "test:all": "nx run-many --target=test"
   },
@@ -10,15 +11,7 @@
   "dependencies": {
     "nx": "15.6.3"
   },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "**/lambda-*",
-      "**/lambda-*/**",
-      "**/lib-*",
-      "**/lib-*/**"
-    ]
-  }
+  "workspaces": [
+    "packages/*"
+  ]
 }
